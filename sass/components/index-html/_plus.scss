@@ -1,0 +1,41 @@
+.plus-cards {
+    display: flex;
+    padding-top: 94px;
+}
+
+.plus-cards__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+.plus-cards__element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+
+    width: 270px;
+    height: 120px;
+    background-color: var(--secondary-white-color);
+    border-radius: 4px;
+}
+
+.plus-cards__item {
+    width: 270px;
+}
+
+.plus-cards__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.plus-cards__text {
+    margin-top: 10px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--tltle-text-color);
+}

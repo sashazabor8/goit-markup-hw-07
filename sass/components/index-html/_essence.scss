@@ -1,0 +1,42 @@
+.work__container {
+    padding-bottom: 94px;
+    padding-top: 94px;
+}
+
+.work__title {
+    margin-bottom: 50px;
+}
+
+.essence {
+    display: flex;
+}
+
+.essence__item {
+    position: relative;
+}
+
+.essence__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+
+.essence__image {
+    display: block;
+}
+
+.essence__title {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: var(--background-color-essence__title);
+    color: var(--primary-white-color);
+}

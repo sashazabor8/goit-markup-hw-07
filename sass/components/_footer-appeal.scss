@@ -1,0 +1,40 @@
+.appeal {
+    margin-left: 70px;
+}
+
+.appeal__title {
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 12px;
+
+    font-weight: 700;
+    line-height: 1.142;
+    text-transform: uppercase;
+    color: var(--primary-white-color);
+}
+
+.appeal__list {
+    display: flex;
+}
+
+.appeal__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.appeal__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    fill: var(--primary-white-color);
+    transition: background-color 250ms var(--cubic);
+}
+
+.appeal__link:hover,
+.appeal__link:focus {
+    background-color: var(--accent-color);
+}

@@ -1,0 +1,90 @@
+.team {
+    background-color: var(--secondary-white-color);
+    text-align: center;
+}
+
+.team__container {
+    padding-bottom: 94px;
+    padding-top: 94px;
+}
+
+.team__title {
+    margin-bottom: 50px;
+}
+
+.workers {
+    display: block;
+}
+
+.workers__list {
+    display: flex;
+    
+}
+
+.workres__cards {
+    width: 270px;
+    background-color: var(--primary-white-color);
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.workres__cards:not(:last-child) {
+    margin-right: 30px;
+}
+
+.workers__image {
+    display: block;
+}
+
+.workers__info {
+    padding: 30px 32px;
+}
+
+.workers__name {
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+}
+
+.workers__position {
+    margin-bottom: 16px;
+
+    color: var(--tltle-text-color);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.357;
+
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-icons__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    fill: rgba(175, 177, 184, 1);
+
+    transition: fill 250ms var(--cubic), background-color 250ms var(--cubic);
+}
+
+.social-icons__link:hover,
+.social-icons__link:focus {
+    fill: var(--primary-white-color);
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
