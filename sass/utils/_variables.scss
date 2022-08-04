@@ -1,15 +1,14 @@
-:root {
-    --primary-text-color: #212121;
-    --tltle-text-color: #757575;
-    --accent-color: #2196F3;
-    --primary-white-color: #FFFFFF;
-    --secondary-white-color: #F5F4FA;
-    --background-color-backdrop: rgba(0, 0, 0, 0.2);
-    --color-placeholder: rgba(117, 117, 117, 0.5);
-    --background-color-essence__title: rgba(47, 48, 58, 0.8);
-    --transparent-white-color: rgba(255, 255, 255, 0.6);
-    --portfolio-overley-bgc: rgba(33, 150, 243, 0.9);
-    --background-black-color: #2F303A;
+$primary-text-color: #212121;
+$tltle-text-color: #757575;
+$accent-color: #2196F3;
+$primary-white-color: #FFFFFF;
+$secondary-white-color: #F5F4FA;
+$background-color-backdrop: rgba(0, 0, 0, 0.2);
+$color-placeholder: rgba(117, 117, 117, 0.5);
+$background-color-essence__title: rgba(47, 48, 58, 0.8);
+$transparent-white-color: rgba(255, 255, 255, 0.6);
+$portfolio-overley-bgc: rgba(33, 150, 243, 0.9);
+$background-black-color: #2F303A;
 
-    --cubic: cubic-bezier(0.4, 0, 0.2, 1);
-}
+$cubic: cubic-bezier(0.4, 0, 0.2, 1);
+

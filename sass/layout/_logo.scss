@@ -4,8 +4,9 @@
     font-size: 26px;
     line-height: 1.192;
     text-decoration: none;
+
+    &__accent {
+        color: $accent-color;
+    }
 }
 
-.logo__accent {
-    color: var(--accent-color);
-}

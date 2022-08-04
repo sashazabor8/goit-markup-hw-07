@@ -1,28 +1,29 @@
+// UTILS
 @import './utils/variables';
-@import './components/reset-styles';
-@import './components/special-classes';
+@import './utils/mixins';
 
-@import './components/index-html/modal-window';
+// BASE
+@import './base/common';
+@import './base/special-classes';
 
-@import './components/header';
-@import './components/logo';
-@import './components/logo-header';
+// LAYOUT
+@import './layout/header';
+@import './layout/logo';
+@import './layout/logo-header';
 
-@import './components/footer';
-@import './components/footer-appeal';
-@import './components/footer-subscribe';
+@import './layout/footer';
+@import './layout/footer-appeal';
+@import './layout/footer-subscribe';
+
+// INDEX.HTML
 
 @import './components/index-html/hero';
-
 @import './components/index-html/plus';
-
 @import './components/index-html/essence';
-
 @import './components/index-html/team';
-
 @import './components/index-html/clients';
+@import './components/index-html/modal-window';
 
-
+// PORTFOLIO.HTML
 @import './components/portfolio-html/examples';
-
 @import './components/portfolio-html/portfolio'

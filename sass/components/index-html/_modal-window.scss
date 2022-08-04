@@ -7,19 +7,20 @@
     opacity: 1;
     transform: scale(1);
 
-    background-color: var(--background-color-backdrop);
+    background-color: $background-color-backdrop;
 
-    transition: opacity 500ms var(--cubic);
+    transition: opacity 500ms $cubic;
 }
 
 .is-hidden {
     opacity: 0;
     pointer-events: none;
+
+        & .modal {
+                transform: translate(-50%, -50%) scale(1.2);
+            }
 }
 
-.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(1.2);
-}
 
 .modal {
     position: absolute;
@@ -31,61 +32,60 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
 
-    background-color: var(--primary-white-color);
+    background-color: $primary-white-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    transition: transform 500ms var(--cubic);
-}
+    transition: transform 500ms $cubic;
 
-.modal__button-close {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 8px;
-    right: 8px;
-    cursor: pointer;
+        &__button-close {
+                position: absolute;
+                @include flex-ai-jc ();
+                top: 8px;
+                right: 8px;
+                cursor: pointer;
+        
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                background-color: $primary-white-color;
+            }
 
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: var(--primary-white-color);
+            &__title {
+                display: block;
+                margin-bottom: 12px;
+            
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 1.15;
+                text-align: center;
+            }
 }
 
 .modal__icon-close {
     fill: #000000;
-    transition: fill 250ms var(--cubic);
-}
+    transition: fill 250ms $cubic;
 
-.modal__button-close:hover .modal__icon-close {
-    fill: var(--accent-color);
-}
-
-.modal__title {
-    display: block;
-    margin-bottom: 12px;
-
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15;
-    text-align: center;
+        .modal__button-close:hover & {
+                fill: $accent-color;
+            }
 }
 
 .modal-form {
     display: flex;
     flex-direction: column;
-}
 
-.modal-form__label {
-    position: relative;
-    display: inline-flex;
-    flex-direction: column;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.166;
-    letter-spacing: 0.01em;
-    color: var(--tltle-text-color);
+        &__label {
+                position: relative;
+                display: inline-flex;
+                flex-direction: column;
+
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 1.166;
+                letter-spacing: 0.01em;
+                color: $tltle-text-color;
+            }
 }
 
 .modal-form__icon {
@@ -93,13 +93,13 @@
     bottom: 11px;
     left: 12px;
 
-    fill: var(--primary-text-color);
-    transition: fill 250ms var(--cubic);
-}
+    fill: $primary-text-color;
+    transition: fill 250ms $cubic;
 
-.modal-form__input:focus+.modal-form__icon,
-.modal-form__input:hover+.modal-form__icon {
-    fill: var(--accent-color);
+        .modal-form__input:focus+&,
+        .modal-form__input:hover+& {
+            fill: $accent-color;
+        }
 }
 
 .modal-form__label:nth-child(-n + 3) {
@@ -115,12 +115,12 @@
     height: 40px;
     cursor: pointer;
 
-    transition: border 250ms var(--cubic);
-}
+    transition: border 250ms $cubic;
 
-.modal-form__input:hover,
-.modal-form__input:focus {
-    border: 1px solid var(--accent-color);
+        &:hover,
+        &:focus {
+                border: 1px solid $accent-color;
+            }
 }
 
 .modal-form__texterea {
@@ -128,54 +128,61 @@
     min-width: 448px;
     min-height: 120px;
     padding: 12px 16px;
+
     resize: none;
     cursor: pointer;
-
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 
-    transition: border 250ms var(--cubic);
-}
+    transition: border 250ms $cubic;
 
-.modal-form__texterea:hover {
-    border: 1px solid var(--accent-color);
-}
+        &:hover {
+                border: 1px solid $accent-color;
+            }
 
-.modal-form__texterea::placeholder {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.142;
-    letter-spacing: 0.01em;
-
-    color: var(--color-placeholder);
-}
-
-.policy__checkbox {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+        &::placeholder {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 1.142;
+                letter-spacing: 0.01em;
+        
+                color: $color-placeholder;
+            }
 }
 
 .policy {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    justify-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 20px;
-    text-align: center;
+    
 
 
     font-weight: 400;
     font-size: 14px;
     line-height: 1.714;
 
-    color: var(--tltle-text-color);
+    color: $tltle-text-color;
+
+        &__checkbox {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                margin: -1px;
+                border: 0;
+                padding: 0;
+                white-space: nowrap;
+                clip-path: inset(100%);
+                clip: rect(0 0 0 0);
+                overflow: hidden;
+            }
+
+        &__link {
+            margin-left: 5px;
+            color: $accent-color;
+            }
 }
 
 .policy__icon {
@@ -186,22 +193,17 @@
     width: 16px;
     height: 15px;
 
-    border: 2px solid var(--primary-text-color);
+    border: 2px solid $primary-text-color;
     border-radius: 4px;
 
-}
+        .policy__checkbox:checked+& {
+            border-color: transparent;
+    
+            background-image: url('../images/checkboxfull.svg');
+            background-size: contain;
+            background-origin: border-box;
+        }
 
-.policy__checkbox:checked+.policy__icon {
-    border-color: transparent;
-
-    background-image: url('../images/checkboxfull.svg');
-    background-size: contain;
-    background-origin: border-box;
-}
-
-.policy__link {
-    color: var(--accent-color);
-    margin-left: 5px;
 }
 
 .modal-form__button {
@@ -213,8 +215,8 @@
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-    background-color: var(--accent-color);
-    color: var(--primary-white-color);
+    background-color: $accent-color;
+    color: $primary-white-color;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;

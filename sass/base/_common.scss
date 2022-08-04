@@ -1,11 +1,17 @@
 body {
-    background-color: var(--primary-white-color);
-    color: var(--primary-text-color);
+    background-color: $primary-white-color;
+    color: $primary-text-color;
     font-family: Roboto, sans-serif;
     font-size: 14px;
     letter-spacing: 0.03em;
     text-decoration: none;
     list-style: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 h1,
@@ -23,4 +29,4 @@ a {
     padding: 0;
     text-decoration: none;
     list-style: none;
-}
+} 
