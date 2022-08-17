@@ -1,226 +1,226 @@
-.backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    transform: scale(1);
+// .backdrop {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     opacity: 1;
+//     transform: scale(1);
 
-    background-color: $background-color-backdrop;
+//     background-color: $background-color-backdrop;
 
-    transition: opacity 500ms $cubic;
-}
+//     transition: opacity 500ms $cubic;
+// }
 
-.is-hidden {
-    opacity: 0;
-    pointer-events: none;
+// .is-hidden {
+//     opacity: 0;
+//     pointer-events: none;
 
-        & .modal {
-                transform: translate(-50%, -50%) scale(1.2);
-            }
-}
+//         & .modal {
+//                 transform: translate(-50%, -50%) scale(1.2);
+//             }
+// }
 
 
-.modal {
-    position: absolute;
-    width: 528px;
-    min-height: 581px;
-    padding: 40px;
+// .modal {
+//     position: absolute;
+//     width: 528px;
+//     min-height: 581px;
+//     padding: 40px;
 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%) scale(1);
 
-    background-color: $primary-white-color;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    transition: transform 500ms $cubic;
+//     background-color: $primary-white-color;
+//     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+//     border-radius: 4px;
+//     transition: transform 500ms $cubic;
 
-        &__button-close {
-                position: absolute;
-                @include flex-ai-jc ();
-                top: 8px;
-                right: 8px;
-                cursor: pointer;
+//         &__button-close {
+//                 position: absolute;
+//                 @include flex-ai-jc ();
+//                 top: 8px;
+//                 right: 8px;
+//                 cursor: pointer;
         
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-                border: 1px solid rgba(0, 0, 0, 0.1);
-                background-color: $primary-white-color;
-            }
+//                 width: 30px;
+//                 height: 30px;
+//                 border-radius: 50%;
+//                 border: 1px solid rgba(0, 0, 0, 0.1);
+//                 background-color: $primary-white-color;
+//             }
 
-            &__title {
-                display: block;
-                margin-bottom: 12px;
+//             &__title {
+//                 display: block;
+//                 margin-bottom: 12px;
             
-                font-weight: 700;
-                font-size: 20px;
-                line-height: 1.15;
-                text-align: center;
-            }
-}
+//                 font-weight: 700;
+//                 font-size: 20px;
+//                 line-height: 1.15;
+//                 text-align: center;
+//             }
+// }
 
-.modal__icon-close {
-    fill: #000000;
-    transition: fill 250ms $cubic;
+// .modal__icon-close {
+//     fill: #000000;
+//     transition: fill 250ms $cubic;
 
-        .modal__button-close:hover & {
-                fill: $accent-color;
-            }
-}
+//         .modal__button-close:hover & {
+//                 fill: $accent-color;
+//             }
+// }
 
-.modal-form {
-    display: flex;
-    flex-direction: column;
+// .modal-form {
+//     display: flex;
+//     flex-direction: column;
 
-        &__label {
-                position: relative;
-                display: inline-flex;
-                flex-direction: column;
+//         &__label {
+//                 position: relative;
+//                 display: inline-flex;
+//                 flex-direction: column;
 
-                font-weight: 400;
-                font-size: 12px;
-                line-height: 1.166;
-                letter-spacing: 0.01em;
-                color: $tltle-text-color;
-            }
-}
+//                 font-weight: 400;
+//                 font-size: 12px;
+//                 line-height: 1.166;
+//                 letter-spacing: 0.01em;
+//                 color: $tltle-text-color;
+//             }
+// }
 
-.modal-form__icon {
-    position: absolute;
-    bottom: 11px;
-    left: 12px;
+// .modal-form__icon {
+//     position: absolute;
+//     bottom: 11px;
+//     left: 12px;
 
-    fill: $primary-text-color;
-    transition: fill 250ms $cubic;
+//     fill: $primary-text-color;
+//     transition: fill 250ms $cubic;
 
-        .modal-form__input:focus+&,
-        .modal-form__input:hover+& {
-            fill: $accent-color;
-        }
-}
+//         .modal-form__input:focus+&,
+//         .modal-form__input:hover+& {
+//             fill: $accent-color;
+//         }
+// }
 
-.modal-form__label:nth-child(-n + 3) {
-    margin-bottom: 10px;
-}
+// .modal-form__label:nth-child(-n + 3) {
+//     margin-bottom: 10px;
+// }
 
-.modal-form__input {
-    margin-top: 4px;
-    padding-left: 42px;
+// .modal-form__input {
+//     margin-top: 4px;
+//     padding-left: 42px;
 
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    height: 40px;
-    cursor: pointer;
+//     border: 1px solid rgba(33, 33, 33, 0.2);
+//     border-radius: 4px;
+//     height: 40px;
+//     cursor: pointer;
 
-    transition: border 250ms $cubic;
+//     transition: border 250ms $cubic;
 
-        &:hover,
-        &:focus {
-                border: 1px solid $accent-color;
-            }
-}
+//         &:hover,
+//         &:focus {
+//                 border: 1px solid $accent-color;
+//             }
+// }
 
-.modal-form__texterea {
-    margin-top: 4px;
-    min-width: 448px;
-    min-height: 120px;
-    padding: 12px 16px;
+// .modal-form__texterea {
+//     margin-top: 4px;
+//     min-width: 448px;
+//     min-height: 120px;
+//     padding: 12px 16px;
 
-    resize: none;
-    cursor: pointer;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
+//     resize: none;
+//     cursor: pointer;
+//     border: 1px solid rgba(33, 33, 33, 0.2);
+//     border-radius: 4px;
 
-    transition: border 250ms $cubic;
+//     transition: border 250ms $cubic;
 
-        &:hover {
-                border: 1px solid $accent-color;
-            }
+//         &:hover {
+//                 border: 1px solid $accent-color;
+//             }
 
-        &::placeholder {
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 1.142;
-                letter-spacing: 0.01em;
+//         &::placeholder {
+//                 font-weight: 400;
+//                 font-size: 14px;
+//                 line-height: 1.142;
+//                 letter-spacing: 0.01em;
         
-                color: $color-placeholder;
-            }
-}
+//                 color: $color-placeholder;
+//             }
+// }
 
-.policy {
-    display: flex;
-    align-items: center;
+// .policy {
+//     display: flex;
+//     align-items: center;
 
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 20px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     padding-top: 20px;
     
 
 
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.714;
+//     font-weight: 400;
+//     font-size: 14px;
+//     line-height: 1.714;
 
-    color: $tltle-text-color;
+//     color: $tltle-text-color;
 
-        &__checkbox {
-                position: absolute;
-                width: 1px;
-                height: 1px;
-                margin: -1px;
-                border: 0;
-                padding: 0;
-                white-space: nowrap;
-                clip-path: inset(100%);
-                clip: rect(0 0 0 0);
-                overflow: hidden;
-            }
+//         &__checkbox {
+//                 position: absolute;
+//                 width: 1px;
+//                 height: 1px;
+//                 margin: -1px;
+//                 border: 0;
+//                 padding: 0;
+//                 white-space: nowrap;
+//                 clip-path: inset(100%);
+//                 clip: rect(0 0 0 0);
+//                 overflow: hidden;
+//             }
 
-        &__link {
-            margin-left: 5px;
-            color: $accent-color;
-            }
-}
+//         &__link {
+//             margin-left: 5px;
+//             color: $accent-color;
+//             }
+// }
 
-.policy__icon {
-    display: inline-block;
-    margin-right: 9px;
+// .policy__icon {
+//     display: inline-block;
+//     margin-right: 9px;
 
-    cursor: pointer;
-    width: 16px;
-    height: 15px;
+//     cursor: pointer;
+//     width: 16px;
+//     height: 15px;
 
-    border: 2px solid $primary-text-color;
-    border-radius: 4px;
+//     border: 2px solid $primary-text-color;
+//     border-radius: 4px;
 
-        .policy__checkbox:checked+& {
-            border-color: transparent;
+//         .policy__checkbox:checked+& {
+//             border-color: transparent;
     
-            background-image: url('../images/checkboxfull.svg');
-            background-size: contain;
-            background-origin: border-box;
-        }
+//             background-image: url('../images/checkboxfull.svg');
+//             background-size: contain;
+//             background-origin: border-box;
+//         }
 
-}
+// }
 
-.modal-form__button {
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
-    padding: 10px 55px;
-    border-radius: 4px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+// .modal-form__button {
+//     margin-top: 30px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     width: 200px;
+//     padding: 10px 55px;
+//     border-radius: 4px;
+//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-    background-color: $accent-color;
-    color: $primary-white-color;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    border: none;
-    cursor: pointer;
-}
+//     background-color: $accent-color;
+//     color: $primary-white-color;
+//     font-weight: 700;
+//     font-size: 16px;
+//     line-height: 1.88;
+//     letter-spacing: 0.06em;
+//     border: none;
+//     cursor: pointer;
+// }

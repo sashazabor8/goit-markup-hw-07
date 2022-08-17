@@ -1,27 +1,52 @@
-.team {
+.team { 
     background-color: $secondary-white-color;
+    min-width: 480px;
     text-align: center;
+    
 
-        &__container {
-                padding-bottom: 94px;
-                padding-top: 94px;
+    &__container {
+        padding-bottom: 60px;
+        padding-top: 60px;
+
+        @media screen and (min-width:1200px) {
+            padding-bottom: 94px;
+            padding-top: 94px;
         }
+    }
 
-        &__title {
+    &__title {
+        margin-bottom: 30px;
+
+        @media screen and (min-width:1200px) {
             margin-bottom: 50px;
         }
+    }
+
 }
+
 
 .workers {
     display: block;
 
         &__list {
+            @media screen and (min-width:1200px) {
                 display: flex;
-        
+            }
         }
 
         &__image {
             display: block;
+            width:450px;
+            height: 460px;
+
+            @media screen and (min-width: 768px) {
+                width: 354px;
+                height: 374px;
+            }
+            @media screen and (min-width: 1200px) {
+                width: 270px;
+                height: 260px;
+                        }
         }
 
         &__info {
@@ -41,13 +66,13 @@
         
             color: $tltle-text-color;
             font-weight: 400;
-            font-size: 14px;
+            font-size: 16px;
             line-height: 1.357;
         }
 }
 
 .workres__cards {
-    width: 270px;
+    width: 450px;
     background-color: $primary-white-color;
 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -56,12 +81,15 @@
     border-radius: 0px 0px 4px 4px;
 
         &:not(:last-child) {
-                margin-right: 30px;
+                margin-bottom: 30px;
+
         }
 }
 
 .social-icons {
     display: flex;
+    align-items: center;
+    justify-content: center;
 
         &__item:not(:last-child) {
                 margin-right: 10px;
