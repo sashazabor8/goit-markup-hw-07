@@ -1,17 +1,10 @@
 .team { 
     background-color: $secondary-white-color;
-    min-width: 480px;
     text-align: center;
     
 
     &__container {
-        padding-bottom: 60px;
-        padding-top: 60px;
-
-        @media screen and (min-width:1200px) {
-            padding-bottom: 94px;
-            padding-top: 94px;
-        }
+        padding:60px 15px;
     }
 
     &__title {
@@ -24,29 +17,9 @@
 
 }
 
-
 .workers {
-    display: block;
-
-        &__list {
-            @media screen and (min-width:1200px) {
-                display: flex;
-            }
-        }
-
         &__image {
             display: block;
-            width:450px;
-            height: 460px;
-
-            @media screen and (min-width: 768px) {
-                width: 354px;
-                height: 374px;
-            }
-            @media screen and (min-width: 1200px) {
-                width: 270px;
-                height: 260px;
-                        }
         }
 
         &__info {
@@ -71,19 +44,13 @@
         }
 }
 
-.workres__cards {
-    width: 450px;
+.workers__cards {
     background-color: $primary-white-color;
 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-
-        &:not(:last-child) {
-                margin-bottom: 30px;
-
-        }
 }
 
 .social-icons {
@@ -113,4 +80,46 @@
             border-radius: 50%;
         }
 }
+
+
+
+// MEDIA MAX-WIDTH 767PX 
+@media screen and (max-width:767px) {
+    .workers__cards:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+
+// MEDIA MIN-WIDTH 768PX
+@media screen and (min-width:768px) {
+    .workers {
+        display: flex;
+    }
+}
+
+// MEDIA MIN-WIDTH 768PX--MAX-WIDTH 1199px
+@media screen and (min-width:768px) and (max-width:1199px) {
+    .workers {
+        flex-wrap: wrap;
+        margin: -15px;
+        
+    }
+    .workers__cards {
+        margin: 15px;
+    }
+}
+
+// MEDIA MIN-WIDTH 1200PX 
+@media screen and (min-width:1200px) {
+    .workers__cards:not(:last-child) {
+        margin-right: 30px;
+    }
+    .team__container {
+        padding:94px 15px
+    }
+}
+
+
+
+
 

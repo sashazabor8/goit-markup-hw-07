@@ -1,10 +1,10 @@
-.plus-cards {
+.plus {
     padding-top: 60px;
     padding-bottom: 60px;
+}
 
+.plus-cards {
             &__title {
-                text-align: center;
-                    font-weight: 700;
                     font-size: 14px;
                     line-height: 1.14;
                     text-transform: uppercase;
@@ -31,45 +31,57 @@
                 height: 120px;
                 background-color: $secondary-white-color;
                 border-radius: 4px;
-            
-                @media screen and (max-width:767px) {
-                    width: 100%;
-                }
             }
 }
 
-.plus-cards__item:not(:first-child) {
-    margin-top: 30px;
+// MEDIA MAX-WIDTH 767 PX 
+@media screen and (max-width:767px) {
+    .plus-cards__item:not(:first-child) {
+            margin-top: 30px;
+        }
+}
+
+// MEDIA MIN-WIDTH 768PX
+@media screen and (min-width:768px) {
+    .plus-cards {
+        display: flex;
+    }
+    .plus-cards__title {
+        text-align: start;
+    }
+}
+
+// MEDIA MIN-WIDTH 768PX -- MAX-WIDTH 1199PX
+@media screen and (min-width:768px) and (max-width:1199px) {
+
+    .plus {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .plus-cards {
+        margin: -15px;
+        flex-wrap: wrap;
+    }
+
+    .plus-cards__item {
+        width: calc((100% - 4 * 15px)/2);
+        margin: 15px;
+    }
 }
 
 
+// MEDIA MIN-WIDTH 1200 PX 
 
+@media screen and (min-width:1200px) {
+    .plus {
+        padding-bottom: 94px;
+        padding-top: 94px;
+    }
+    
+    .plus-cards__item:not(:last-child) {
+        margin-right: 30px;
+    }
+}
 
-// .plus-cards {
-//     display: flex;
-//     padding-top: 94px;
-
-
-        // &__element {
-        //     width: 270px;
-        // }
-
-        // &__text {
-        //     margin-top: 10px;
-        
-        //     font-weight: 400;
-        //     font-size: 14px;
-        //     line-height: 1.71;
-        //     letter-spacing: 0.03em;
-        //     color: $tltle-text-color;
-        // }
-// }
-
-// .plus-cards__item {
-//     width: 270px;
-
-//         &:not(:last-child) {
-//                 margin-right: 30px;
-//             }
-// }
 
